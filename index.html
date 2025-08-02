@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Cosmetics</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #081224 0%, #0d1425 100%);
+      color: #e3f9ff;
+      overflow-x: hidden;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .fade-in-delay-1 { animation-delay: 0.3s; }
+    .fade-in-delay-2 { animation-delay: 0.6s; }
+    .fade-in-delay-3 { animation-delay: 0.9s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      background: linear-gradient(to right, #081126, #102b3f);
+      padding: 80px 20px 60px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #7ffcff;
+      font-size: 4rem;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 12px rgba(0, 255, 255, 0.3);
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #98e7ff;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #00f0ff;
+      border-bottom: 2px solid #00f0ff;
+    }
+
+    .section {
+      padding: 90px 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 60px;
+      color: #7efcfc;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .product {
+      background: #101c2f;
+      border-radius: 18px;
+      overflow: hidden;
+      width: 320px;
+      box-shadow: 0 10px 40px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s;
+    }
+
+    .product:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .product-content {
+      padding: 22px;
+    }
+
+    .product-content h3 {
+      color: #80f0ff;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
+    .product-content p {
+      font-size: 1rem;
+      color: #c1e8f7;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 22px;
+      background: linear-gradient(to right, #1a88a3, #22cbe2);
+      color: #051725;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #00f0ff;
+      color: #00111d;
+      transform: scale(1.05);
+    }
+
+    .about p, .contact p {
+      max-width: 800px;
+      text-align: center;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #b2e6f6;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #081126;
+      color: #7ac8e8;
+      text-align: center;
+      padding: 30px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Test Cosmetics</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="products" class="section fade-in fade-in-delay-1">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product fade-in fade-in-delay-1">
+        <img src="https://via.placeholder.com/300x220.png?text=Lipstick" alt="Lipstick">
+        <div class="product-content">
+          <h3>Matte Lipstick</h3>
+          <p>Long-lasting color for all-day glam.</p>
+          <p><strong>৳450</strong></p>
+          <a href="#contact" class="contact-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="product fade-in fade-in-delay-2">
+        <img src="https://via.placeholder.com/300x220.png?text=Foundation" alt="Foundation">
+        <div class="product-content">
+          <h3>Silk Foundation</h3>
+          <p>Lightweight, smooth coverage.</p>
+          <p><strong>৳700</strong></p>
+          <a href="#contact" class="contact-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="product fade-in fade-in-delay-3">
+        <img src="https://via.placeholder.com/300x220.png?text=Eyeliner" alt="Eyeliner">
+        <div class="product-content">
+          <h3>Precision Eyeliner</h3>
+          <p>Sharp and smudge-proof.</p>
+          <p><strong>৳350</strong></p>
+          <a href="#contact" class="contact-btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about fade-in fade-in-delay-2">
+    <h2>About Us</h2>
+    <p>
+      We're a passionate group of young friends sourcing high-quality cosmetics from China to Bangladesh. Our aim is to deliver elegant beauty solutions affordably and reliably. Our mission is to combine global quality with local trust.
+    </p>
+  </section>
+
+  <section id="contact" class="section contact fade-in fade-in-delay-3">
+    <h2>Contact Us</h2>
+    <p>Reach out to place an order through:</p>
+    <div style="text-align: center; margin-top: 20px;">
+      <a class="contact-btn" href="https://wa.me/8801305534823" target="_blank">WhatsApp</a>
+      <a class="contact-btn" href="https://m.me/yourfacebookpage" target="_blank">Messenger</a>
+    </div>
+  </section>
+
+  <footer class="fade-in fade-in-delay-3">
+    &copy; 2025 Test Cosmetics. All rights reserved.
+  </footer>
+</body>
+</html>
